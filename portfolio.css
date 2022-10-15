@@ -1,0 +1,423 @@
+* {
+    margin:     0;
+    box-sizing: border-box;
+    overflow:   visible !important;
+    
+}
+ 
+li, a, button {
+    font-family:      'Ropa Sans', sans-serif;
+    font-weight:      500;
+    font-size:        16px;
+    color:          #edf0f1;
+    text-decoration:  none;
+    background-color:rgba(255,0,0,0);
+    border:           0px; 
+
+}
+
+.cta {
+    padding:           12px 25px;
+    background-color:#0077b5;
+    border:            none;
+    border-radius:     50px;
+    cursor:            pointer;
+    transition:        all 0.3s ease 0s; 
+}
+
+.cta:hover {
+    background-color: rgba(0,136,169,0.8);
+}
+
+:root{
+
+  /* MAIN COLORS! */
+    --primary:    #6BD7BD;
+    --secondary:  #9DACE4;
+    --ternary:    #ffff;
+    --quaternary: #9270DC;
+    --quinary:    #FF6363;
+    --senary:     #BCFF00;
+    --septenary:  #14ABDB;
+    --octonary:   #01FF29;
+    --main-color: #ecf0f1;
+    --size:         5px;
+
+    /* SECTIONS PROPERTIES! */
+    --section-text-size:        20px;
+    --section-text-font:        "Montserrat";
+    --section-text-font-weight: 1000;
+    
+}
+
+.main-container {
+    display:               grid;
+    grid-template-columns: 1fr;
+    grid-template-rows:    0.25fr 3fr 0.5fr 1fr 2fr ;
+    background:            linear-gradient(135deg, var(--quinary), var(--secondary), var(--octonary))  ;
+    overflow:              visible ;
+    
+}
+
+header {
+    display:         flex;
+    justify-content: space-between;
+    align-items:     center;
+    padding:         20px;
+    margin-top:      0%;
+    font-family:     "Montserrat";
+}
+
+
+
+.topnav {
+    list-style:  none; 
+    font-family: "Monsterrat";
+}
+
+.topnav li {
+    display: inline-block;
+    padding: 20px 20px;
+}
+
+.topnav li a {
+    transition:      all 0.3s ease 0s;
+    text-decoration: none;
+    /*border: 2px solid black;*/
+    border-radius:   30px;
+    padding-top:     5px;
+    padding-bottom:  5px;
+    padding-left:    8px;
+    padding-right:   8px;
+    font-family:     "Montserrat";
+    color:         black;
+    font-size:       20px;
+}
+
+.topnav li a:hover {
+    color: #0088a9;
+}
+
+.loader {
+    width:           100%;
+    top: 0;          left: 0;
+    display:         flex;
+    align-items:     center;
+    align-content:   center; 
+    justify-content: space-evenly;
+    z-index:         100000;
+}
+
+.loader__element {
+    border-radius: 100%;
+    margin:        calc(var(--size)*2);
+}
+
+.loader__element:nth-child(1) {
+    animation: preloader .6s ease-in-out alternate .4s infinite;
+    border:    var(--size) solid var(--primary)
+}
+.loader__element:nth-child(2) {
+    animation: preloader .6s ease-in-out alternate .2s infinite;
+    border:    var(--size) solid var(--senary)
+}
+
+.loader__element:nth-child(3) {
+    animation: preloader .3s ease-in-out alternate .4s infinite;
+    border:    var(--size) solid var(--ternary)
+}
+
+.loader__element:nth-child(4) {
+    animation: preloader .6s ease-in-out alternate .2s infinite;
+    border:    var(--size) solid var(--quinary)
+    
+  }
+    
+  .loader__element:nth-child(5) {
+    animation: preloader .4s ease-in-out alternate .2s infinite;
+    border:    var(--size) solid var(--quaternary)
+  }
+  
+  .loader__element:nth-child(6) {
+    animation: preloader .6s ease-in-out alternate .4s infinite;
+    border:    var(--size) solid var(--octonary)
+  }
+
+  .loader__element:nth-child(7) {
+    animation: preloader .7s ease-in-out alternate infinite;
+    border:    var(--size) solid var(--senary)
+  }
+  .loader__element:nth-child(8) {
+    animation: preloader .6s ease-in-out alternate .2s infinite;
+    border:    var(--size) solid var(--secondary)
+  }
+  
+  .loader__element:nth-child(9) {
+    animation: preloader .8s ease-in-out alternate .4s infinite;
+    border:    var(--size) solid var(--quaternary)
+  }
+
+
+@keyframes preloader {
+  100% { transform: scale(2); }
+}
+
+
+.container {
+    display:               grid;
+    grid-template-columns: 2.5fr 1.5fr;
+    align-items:           center;
+    justify-content:       space-evenly;
+    padding:               150px 200px 100px 200px;
+    }
+
+.card {
+    display:        flex;
+    flex-wrap:      wrap;
+    flex-direction: column;
+    align-content:  left;
+}
+
+.name {
+    display:       flex;
+    font-family:   "Montserrat";
+    font-size:     100px;
+    align-items:   center;
+    align-content: flex-start;
+}
+
+.profession {
+    display:     flex;
+    font-family: "Montserrat";
+    font-size:   30px;
+    align-items: center;
+}
+
+.main-photo {
+    /*clip-path: circle(350px at 350px 350px); */
+    display:       flex;
+    align-items:   center;
+    align-content: center;
+    box-shadow:  #372734;
+    min-width:     200px;
+ }
+
+ img {
+    width: 100%;
+    height:100%;
+ }
+
+
+
+/* ----------------  SECTIONS -------------*/
+
+
+ .scrolling {
+    padding:      100px;
+    font-family: "Montserrat";
+    text-align:   center;
+    font-size:    30px;
+    color:      #372734;
+ }
+
+
+
+.sections {
+    overflow:                visible ;
+    transform-style:         preserve-3d;
+    -webkit-transform-style: preserve-3d;
+    display:                 flex;
+    justify-content:         space-between;
+    padding:                 200px 200px 200px 200px;
+    flex-wrap:               wrap;
+}
+
+
+
+ .newstart {
+    overflow:                hidden;
+    background:              linear-gradient(135deg, var(--senary), var(--ternary)) ;
+    border-radius:           30px;
+    transform:
+        rotateX(20deg)
+        rotateZ(20deg);
+    transform-style:         preserve-3d;
+    -webkit-transform-style: preserve-3d;
+    box-shadow:              20px 20px 20px var(--senary);
+    width:                   200px;
+    height:                  200px;
+    transition:
+        .4s ease-in-out transform,
+        .4s ease-in-out box-shadow;
+    font-family:             var(--section-text-font);
+    font-size:               var(--section-text-size);
+    font-weight:             var(--section-text-font-weight);
+    display:                 flex;
+    flex-wrap:               wrap;
+    justify-content:         center;
+    align-items:             center;
+    
+ }
+
+ .newstart:hover {
+    transform:
+      translate3d(0px, -16px, 0px)
+      rotateX(51deg)
+      rotateZ(43deg);
+    
+      box-shadow:
+      -1px 0 28px 0 var(--senary),
+      54px 54px 28px -10px rgba(34, 33, 81, 0.15);
+    
+  }
+
+ .webdevelopment {
+    overflow:                hidden;
+    display:                 flex;
+    background: linear-gradient(135deg, var(--octonary), var(--ternary));
+    border-radius:           30px;
+    transform:
+        rotateX(20deg)
+        rotateZ(20deg);
+    transform-style:         preserve-3d;
+    -webkit-transform-style: preserve-3d;
+    box-shadow: 20px 20px 20px var(--octonary);
+    width:                   200px;
+    height:                  200px;
+    transition:
+        .4s ease-in-out transform,
+        .4s ease-in-out box-shadow;
+    font-family:             var(--section-text-font);
+    font-size:               var(--section-text-size);
+    align-items:             center;
+    justify-content:         center;
+    padding:                 0px 5px 0px 5px;
+ }
+
+ .webdevelopment:hover {
+    transform:
+      translate3d(0px, -16px, 0px)
+      rotateX(51deg)
+      rotateZ(43deg);
+    
+      box-shadow:
+      -1px 0 28px 0 var(--octonary),
+      54px 54px 28px -10px rgba(34, 33, 81, 0.15);
+    
+  }
+ 
+
+ .uxui {
+    overflow:                hidden;
+    display:                 flex;
+    background: linear-gradient(135deg, var(--septenary), var(--ternary));
+    border-radius:           30px;
+    transform:
+        rotateX(20deg)
+        rotateZ(20deg);
+    transform-style:         preserve-3d;
+    -webkit-transform-style: preserve-3d;
+    box-shadow: 20px 20px 20px var(--septenary);
+    width:                   200px;
+    height:                  200px;
+    transition:
+        .4s ease-in-out transform,
+        .4s ease-in-out box-shadow;
+    font-family:             var(--section-text-font);
+    font-size:               var(--section-text-size);
+    align-items:             center;
+    justify-content:         center;
+ }
+
+ .uxui:hover {
+    transform:
+      translate3d(0px, -16px, 0px)
+      rotateX(51deg)
+      rotateZ(43deg);
+    
+      box-shadow:
+      
+      -1px 0 28px 0 var(--septenary),
+      54px 54px 28px -10px rgba(34, 33, 81, 0.15);
+    
+  }
+ 
+
+ .graphic {
+    overflow:                hidden;
+    display:                 flex;
+    background: linear-gradient(135deg, var(--quinary), var(--ternary));
+    border-radius:           30px;
+    
+    transform:
+        rotateX(20deg)
+        rotateZ(20deg);
+    transform-style:         preserve-3d;
+    -webkit-transform-style: preserve-3d;
+    box-shadow: 20px 20px 20px var(--quinary);
+    width:                   200px;
+    height:                  200px;
+    transition:
+        .4s ease-in-out transform,
+        .4s ease-in-out box-shadow;
+    font-family:             var(--section-text-font);
+    font-size:               var(--section-text-size);
+    align-items:             center;
+    justify-content:         center;
+    padding:                 0px 10px 0px 10px;
+ }
+
+ .graphic:hover {
+    transform:
+      translate3d(0px, -16px, 0px)
+      rotateX(51deg)
+      rotateZ(43deg);
+    
+      box-shadow:
+      
+      -1px 0 28px 0 var(--quinary),
+      54px 54px 28px -10px rgba(34, 33, 81, 0.15);
+    
+  }
+ 
+
+ .redesign {
+    overflow:                hidden;
+    display:                 flex;
+    background: linear-gradient(135deg, var(--quaternary), var(--ternary));
+    border-radius:           30px;
+    transform:
+        rotateX(20deg)
+        rotateZ(20deg);
+    transform-style:         preserve-3d;
+    -webkit-transform-style: preserve-3d;
+    box-shadow: 20px 20px 20px var(--quaternary);
+    width:                   200px;
+    height:                  200px;
+    transition:
+        .4s ease-in-out transform,
+        .4s ease-in-out box-shadow;
+    font-family:             var(--section-text-font);
+    font-size:               var(--section-text-size);
+    align-items:             center;
+    justify-content:         center;
+ }
+
+ .redesign:hover {
+    transform:
+      translate3d(0px, -16px, 0px)
+      rotateX(51deg)
+      rotateZ(43deg);
+    
+      box-shadow:
+      
+      -1px 0 28px 0 var(--quaternary),
+      54px 54px 28px -10px rgba(34, 33, 81, 0.15);
+    
+  }
+ 
+
+ span {
+  text-align: center;
+  
+}
